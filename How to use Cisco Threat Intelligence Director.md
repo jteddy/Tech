@@ -1,5 +1,7 @@
 # How to use Cisco Threat Intelligence Director on the Firepower Management Center
 
+The opinions expressed in this blog are my own views and not those of Cisco.
+
 # Introduction
 ![Threat Intelligence Director](https://i.imgur.com/3dVM3FE.png)
 Cisco's Threat Intelligence Director runs on Cisco's Firepower Management Center. It is used to ingest threat intelligence using open standards. Firepower sensors (essentially Cisco's NGFW or NGIPS) provide a rich source of information that includes host and user information, traffic flows from source & destination IP's, port and protocol. Utilising this existing information and leveraging the Threat Intelligence Director you are able to expand your security effectiveness by detecting actionable indicators of compromise from those threat feeds.
