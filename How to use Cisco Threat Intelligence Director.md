@@ -104,7 +104,7 @@ The Threat Intelligence Director requires Firepower Management Center to have:
 - REST API Access enabled 
   - Enable the REST API. *System -> Configuration -> Rest API Preferences*
 
-![FMC Rest API Setting](https://i.imgur.com/1XNcgTk.png)
+![FMC Rest API Setting](https://i.imgur.com/H8WU7Pe.png)
 
 The [Firepower Management Center Configuration Guide, Version 6.2.3](https://www.cisco.com/c/en/us/td/docs/security/firepower/623/configuration/guide/fpmc-config-guide-v623/cisco_threat_intelligence_director__tid_.html?bookSearch=true) states there is no performance impact on managed devices.
 
@@ -115,9 +115,7 @@ If you host TID on the active Firepower Management Center in a high availability
 ### Indicators and Observables
 
 *Observables* is an IOC. The IOC can be a:
-
 - SHA-256
-
 - Domain
 - URL
 - IPv4
@@ -152,7 +150,7 @@ Upon adding the source, you cant change the whole feed to block. This has to be 
 
 An *Elements* is a managed Firepower Threat Defense device.
 
-![](https://i.imgur.com/DyrSBDd.png)
+![FMC TID Element](https://i.imgur.com/DyrSBDd.png)
 
 ### Licensing
 
@@ -167,9 +165,7 @@ STIX Files must be STIX Version 1.0, 1.1, 1.1.1, or 1.2 and adhere to the guidel
 ### Flat File Upload Requirements
 
 Files must be ASCII text files with one observable value per line. Each file should contain only one type of content: 
-
 - SHA-256 - SHA-256 hash values.
-
 - Domain - Domain names as defined in RFC 1035.
 - URL - URLs as defined in RFC 1738.
 - IPv4— IPv4 addresses as defined in RFC 791. (CIDR blocks are unsupported)
@@ -199,7 +195,7 @@ The minimum update time of a feed is 30 minutes imposed by FMC.
 5. The username is your API key. This is your OTX Key. There is no password needed.
 6. Go to Firepower Management Center and click on *Intelligence -> Sources -> Add Source (+)*
 7. Enter in the details and you should see the selectable feed populate.
-   1. ![](https://i.imgur.com/h4IsFs9.png)
+   1. ![Add Source](https://i.imgur.com/h4IsFs9.png)
 8. Click on *Save*
 9. You now have your feed added. At the time of this post, the feed had 5,233 indicators and 4,937 observables.
    1. ![](https://i.imgur.com/f5Mi82V.png)
