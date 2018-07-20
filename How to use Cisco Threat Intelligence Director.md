@@ -146,6 +146,16 @@ After the *Observables* are published to the elements, the elements monitor traf
 
 Upon adding the source, you cant change the whole feed to block. This has to be done individually on *Indicators* and *Observables*.
 
+### Indicators
+
+An indicator conveys all the IOC's associated with a threat. Indicator's can contain patterns that ban be simple or complex. Simple indicators contain on operator being an AND or OR statement as complex indicators contain two or more IOC's.
+
+![](https://i.imgur.com/owEFZye.png)
+
+The below screenshot shows the details of an Indicator.
+
+![](https://i.imgur.com/hE5HPFN.png)
+
 ### Elements
 
 An *Elements* is a managed Firepower Threat Defense device.
@@ -195,12 +205,12 @@ The minimum update time of a feed is 30 minutes imposed by FMC.
 5. The username is your API key. This is your OTX Key. There is no password needed.
 6. Go to Firepower Management Center and click on *Intelligence -> Sources -> Add Source (+)*
 7. Enter in the details and you should see the selectable feed populate.
-   1. ![Add Source](https://i.imgur.com/h4IsFs9.png)
+    ![Add Source](https://i.imgur.com/h4IsFs9.png)
 8. Click on *Save*
 9. You now have your feed added. At the time of this post, the feed had 5,233 indicators and 4,937 observables.
-   1. ![](https://i.imgur.com/f5Mi82V.png)
+    ![](https://i.imgur.com/f5Mi82V.png)
 10. The import did complete although with errors as some information was invalid or unsupported.
-    1. ![](https://i.imgur.com/A1FGWO4.png)
+     ![](https://i.imgur.com/A1FGWO4.png)
 
 ### Hail A TAXII
 
@@ -208,7 +218,7 @@ The minimum update time of a feed is 30 minutes imposed by FMC.
 2. Enter in the [Hail A TAXII](http://hailataxii.com/) discovery URL in the URL field. <http://hailataxii.com/taxii-discovery-service> 
 3. A username and password is required. Use *guest/guest* 
 4. Select your desired feeds.
-   1. ![](https://i.imgur.com/3cQWflK.png)
+    ![](https://i.imgur.com/3cQWflK.png)
 5. Click on Save.
 
 ![](https://i.imgur.com/BnxwuLY.png)
