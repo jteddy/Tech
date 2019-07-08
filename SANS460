@@ -1,0 +1,98 @@
+# Netstat Commands
+`netstat -ano`
+`netstat -an | findstr LISTEN | findstr 80`
+`tree`
+
+# Net Shell
+
+`netsh /?`
+
+Usage: netsh [-a AliasFile] [-c Context] [-r RemoteMachine] [-u [DomainName\]UserName] [-p Password | *]              [Command | -f ScriptFile]
+
+# Firewall Status
+`netsh advfirewall set currentprofile ?`
+`netsh advfirewall show allprofiles`
+`netsh advfirewall show all state`
+
+# PowerShell Unsigned
+ Allow unsigned scripts to be run,
+
+`powershell -exec bypass`
+`$PSVersionTable`
+
+https://github.com/dafthack/HostRecon
+
+# Host Recon
+
+HostRecon is a PowerShell script and is available for download at (it is already in the VM): https://github.com/dafthack/HostRecon
+
+`cd \Tools\PowerShell
+Import-Module .\HostRecon.ps1
+Invoke-HostRecon -DisableDomainChecks > host-recon.output
+notepad .\host-recon.output`
+
+# Interact with AD
+
+In order to interact with Windows Active Directory PowerShell needs an additional module, the RSAT. The install script can be downloaded from Microsoft (it is already in the VM):
+https://gallery.technet.microsoft.com/Install-the-Active-fd32e541
+
+It only works on Windows 10, and requires an Administrator level of privilege in PowerShell. Reopen PowerShell if you have closed it, make sure it is running elevated. It runs some checks, then downloads and installed the module.
+
+.\Install-ADModule -Verbose
+
+# Spectre
+
+`Install-Module SpeculationControl
+Import-Module SpeculationControl
+Get-SpeculationControlSettings`
+
+# Convert Strings in PowerShell
+
+`$String = 'The hidden secret!'`
+`[System.Convert]::ToBase64String(System.Text.Encoding::ASCII.GetBytes($String))`
+VGhlIGhpZGRlbiBzZWNyZXQh
+
+`$Encoded = 'U25lYWtlcnMgaXMgdGhlIG1vc3QgYXdlc29tZSBoYWNraW5nIG1vdmllIGV2ZXIh'`
+`[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String($Encoded))`
+
+# Processes
+
+Start Notepad
+`Start-Process notepad`
+
+Start Process Maximized
+`Start-Process notepad -WindowStyle Maximized`
+
+Find Process Information
+
+`Get-Help Get-Process`
+
+`Get-Process notepad`
+
+Kill a process (get process ID first)
+
+`Get-Help Stop-Process`
+
+`Stop-Process 460`
+
+Stop all notepad processes
+
+`Get-Process notepad | Stop-Process`
+
+# nMAP
+
+nMAP version scans
+
+`nmap -sV -p 80,443,8080,8443 -v heartofgold.sec460.com`
+
+# nMAP Heartbleed
+
+`nmap --script ssl-heartbleed -p 443 heartofgold.sec460.com`
+
+# Python Heartbleed
+`python heartbleed-poc.py`
+`python heartbleed-poc.py heartofgold.sec460.com -p 443`
+
+```
+strings2 dump.bin
+```
