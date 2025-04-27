@@ -1,0 +1,2 @@
+- [Cisco Threat Intelligence Director - Config Guide](https://github.com/jteddy/Tech/blob/master/How%20to%20use%20Cisco%20Threat%20Intelligence%20Director.md)
+- [SANS 460 Notes](https://github.com/jteddy/Tech/blob/master/SANS460)
